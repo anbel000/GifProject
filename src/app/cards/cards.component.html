@@ -1,0 +1,21 @@
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<div class="container">
+  <!-- Search -->
+  <div class="row">
+    <div class="col-12 mb-3 mt-3">
+      <div class="form-group has-search">
+        <span class="fa fa-search form-control-feedback"></span>
+        <input type="text" class="form-control" placeholder="Buscador" [(ngModel)]="searchValue" (keyup)="searchGif()" />
+      </div>
+    </div>
+  </div>
+  <!-- Search -->
+
+  <!-- Gallery Gif -->
+  <div class="gallery">
+    @for (gif of gifs.data; track gif.id) {
+    <img src="{{ gif.images.original.url }}" alt="Image 1" />
+    }
+  </div>
+  <!-- Gallery Gif -->
+</div>
